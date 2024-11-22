@@ -1,0 +1,98 @@
+.login-page{
+    background-color: #353850;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card{
+    background-color: white;
+    color: #353850;
+    display: flex;
+    border-radius: 20px;
+}
+
+.login-area{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-area span{
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.login-area input{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #D7DBEE;
+    border: none;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+.login-area input:focus{
+    outline: none;
+}
+
+.login-area button{
+    background-color: #3D437A;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-area button:hover{
+    background-color: #2334CF;
+}
+
+.login-area p{
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.login-area p span{
+    color: #2334CF;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.login-area p span:hover{
+    text-decoration: underline;
+}
+
+.login-banner{
+    padding: 20px;
+    background-color: #3D437A;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 600px;
+    height: 500px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.login-banner span{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.login-banner p{
+    font-weight: 200;
+}
+

@@ -1,0 +1,544 @@
+.main-screen{
+        background-color: #D7DBEE;
+        color: black;
+        width: 100%;
+        height: 100%;
+        display: flex;
+}
+
+.menu-bar{
+    width: 300px;
+    min-width: 300px;
+    background-color: #3D437A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-content{
+    color: white;
+    width: 100%;
+}
+
+.menu-content span{
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menu-title{
+    border-bottom: 1px solid #A3BAFF;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    padding: 10px;
+    font-weight: 200;
+}
+
+.menu-item{
+    border-bottom: 1px solid #A3BAFF;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    padding: 10px;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+.menu-item:hover{
+    background-color: #555da9;
+
+}
+
+.menu-bar button{
+    width: 280px;
+    margin-bottom: 20px;
+    height: 40px;
+    background-color: white;
+    color: #3D437A;
+    border: none;
+    border-radius: 10px;
+}
+
+.menu-bar button:hover{
+    background-color: #1d2041;
+    color: white;
+}
+
+.view{
+    padding: 20px;
+    width: 100%;
+}
+
+.view-header{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.view-header span{
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.add-button{
+    background-color: #3D437A;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+}
+
+.view-body{
+    display: flex; 
+    flex-direction: column;  
+    height: 90%;
+}
+
+.no-events{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center; 
+}
+
+.no-events p{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.no-events button{
+    width: 250px;
+    height: 40px;
+    background-color: #3D437A;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.no-events button:hover{
+    background-color: #1d2041;
+}
+
+.create-event-modal{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.74);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-event-area{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: baseline;
+}
+
+.return-button{
+    width: 50px;
+    height: 50px;
+    background-color: #3D437A;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 800;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.create-inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.create-inputs span{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.create-inputs input{
+    width: 300px;
+    height: 40px;
+    background-color:  #D7DBEE;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: black;
+    margin-bottom: 10px;
+    padding-right: 10px;
+}
+
+.create-inputs textarea{
+    background-color:  #D7DBEE;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    color: black;
+    resize: none;
+}
+
+
+.create-inputs textarea:focus{
+    outline: none;
+}
+
+.create-inputs input:focus{
+    outline: none;
+}
+
+.event-buttons .remove{
+    background-color: rgb(126, 1, 1);
+}
+
+.event-buttons .remove:hover{
+    background-color: rgb(167, 0, 0);
+}
+
+.create-inputs input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #1d2041;
+    border-radius: 100%;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.create-inputs button{
+    background-color: #3D437A;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.create-inputs button:hover{
+    background-color: #1d2041;
+}
+
+.event-list{
+    width: 100%;
+    overflow-y: auto;
+}
+
+.list-item{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    background-color: #a1a7c9;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.header{
+    background-color: #1d2041;
+    color: white;
+    font-weight: 600;
+}
+
+.list-item button{
+    flex: 1;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d2041;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.list-item div{
+    flex: 1;
+}
+
+.list-item button:hover{
+    background-color: white;
+    color: #1d2041;
+}
+
+.id{
+    font-weight: 600;   
+}
+
+.event-detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.716);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-area{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 650px;
+    display: flex;
+    align-items: baseline;
+    font-weight: 200;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+}
+
+.details-title{
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.detail-area span{
+    font-weight: 600;
+}
+
+.guess-list{
+    width: 100%;
+}
+
+.guess-list-header{
+    margin-top: 15px;
+    background-color: #3D437A;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.guess-list-items{
+    height: 250px;
+    overflow-y: auto;
+}
+
+.guess-list-item{
+    background-color: #D7DBEE;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    display: flex;
+}
+
+.guess-list-item div{
+    flex: 1;
+}
+
+
+.guess-list-item .remove{
+    background-color: red;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    
+}
+
+.guess-list-item .remove:hover{
+    background-color: rgb(126, 1, 1);
+}
+
+.confirm{
+    max-width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmed{
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.non-confirmed{
+    background-color: grey;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: solid 1px rgb(76, 76, 76);
+    cursor: pointer;
+}
+
+.guess-list-item button{
+    cursor: pointer;
+}
+
+.guess-list-item .editar{
+    background-color: #3D437A;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.guess-list-item .editar:hover{
+    background-color: #1d2041;
+}
+
+.add-guess-form{
+    background-color: #3D437A;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.add-guess-form input{
+    background-color: #A3BAFF;
+    color: black;
+    height: 40px;
+    padding-left: 10px;
+    border: none;
+    border-radius: 10px;
+    margin: 2.5px;
+}
+
+.add-guess-form input:focus{
+    outline: none;
+}
+
+.add-guess-form button{
+    background-color: white;
+    color: #1d2041;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.delete-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.701);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete-content{
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.delete-title{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.delete-buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.delete-buttons button{
+    width: 300px;
+    height: 40px;
+    margin-bottom: 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.delete-buttons .delete{
+    background-color: rgb(107, 1, 1);
+}
+.delete:hover{
+    background-color: rgb(167, 0, 0);
+}
+.normal{
+    background-color: #1d2041;
+}
+
+.normal:hover{
+    background-color: #3D437A;
+}
+
+.delete-content input{
+    background-color: #D7DBEE;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.delete-content input:disabled{
+    background-color: #656989;
+}
+
+.event-buttons button{
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #3D437A;
+    width: 150px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.event-buttons button:hover{
+    background-color: #1d2041;
+}
+
+.concluded-event{
+    display: flex;
+    align-items: baseline;
+}
+
+.event-information span{
+    font-size: 20px;
+    font-weight: 600;
+}
