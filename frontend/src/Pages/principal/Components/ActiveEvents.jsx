@@ -38,6 +38,13 @@ function ActiveEvents( {userData, updateData} ) {
         updateData();
     }
 
+    const clearInputs = () => {
+        setEventName('');
+        setEventLocal('');
+        setEventDate('');
+        setEventDescription('');
+    }
+
     const handleNewEvent = async() => {
         if(eventName == '' || eventDescription == '' || eventLocal == '' || eventDate == ''){
             console.log("insira valores validos");
@@ -64,6 +71,7 @@ function ActiveEvents( {userData, updateData} ) {
             const result = await response.json();
 
             closeModal()
+            clearInputs()
     
         }catch(error){
             console.log(error)

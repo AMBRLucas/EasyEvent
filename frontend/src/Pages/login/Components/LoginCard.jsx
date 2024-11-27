@@ -14,12 +14,23 @@ function LoginCard(){
     const [logUsername, setLogUsername] = useState('');
     const [logPassword, setLogPassword] = useState('');
 
+    const [cadUsername, setCadUsername] = useState('');
+    const [cadPassword, setCadPassword] = useState('');
+
     const handleLogUsernameChange = (event) => {
         setLogUsername(event.target.value);
     }
 
     const handleLogPasswordChange = (event) => {
         setLogPassword(event.target.value)
+    }
+
+    const handleCadUsername = (event) => {
+        setCadUsername(event.target.value);
+    }
+
+    const handleCadPassword = (event) => {
+        setCadPassword(event.target.value);
     }
 
     const handleLogin = async() => {
@@ -50,6 +61,30 @@ function LoginCard(){
         }
     }
 
+    const handleRegistry = async() => {
+        try{
+            const response = await fetch("http://localhost:8080/user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    username: cadUsername,
+                    password: cadPassword
+                })
+            })
+    
+            const result = await response.json();
+    
+            localStorage.setItem("id", result.id);
+            setUser(result.id);
+    
+            setTela('principal')
+        }catch(error){
+            console.log(error);
+        }
+    }
+
     return(
         <div className="login-card">
             {type === 'login' &&
@@ -64,11 +99,10 @@ function LoginCard(){
             {type === 'cadastro' &&
                 <div className="login-area">
                     <span>Cadastro</span>
-                    <input type="text" name="username" placeholder="Nome de Usuário" />
-                    <input type="password" name="password" placeholder="Senha"/>
-                    <input type="password" name="confirm-password" placeholder="Confirmar Senha"/>
-                    <button>Login</button>
-                    <p>Já tem uma conta? <span onClick={() => setType("login")}>Entrar</span></p>
+                    <input type="text" name="username" placeholder="Nome de Usuário" value={cadUsername} onChange={handleCadUsername} />
+                    <input type="password" name="password" placeholder="Senha" value={cadPassword} onChange={handleCadPassword}/>
+                    <button onClick={handleRegistry}>Cadastrar</button>
+                    <p>Já tem uma conta? <span onClick={() => setType("login")}>Criar uma</span></p>
                 </div>
             }
             <div className="login-banner">

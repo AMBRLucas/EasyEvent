@@ -1,5 +1,10 @@
 function MenuBar({setView}) {
 
+    const handleLogout = () => {
+        localStorage.removeItem("id");
+        window.location.reload();
+    }
+
     return (
         <div className="menu-bar">
             <div className="menu-content">
@@ -12,11 +17,8 @@ function MenuBar({setView}) {
                 <div className="menu-item" onClick={() => setView("history")}>
                     Historico de eventos
                 </div>
-                <div className="menu-item">
-                    Minha conta
-                </div>
             </div>
-            <button>Sair</button>
+            <button onClick={handleLogout}>Sair</button>
         </div>
     )
 }

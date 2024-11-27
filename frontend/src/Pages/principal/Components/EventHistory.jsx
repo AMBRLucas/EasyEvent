@@ -48,7 +48,7 @@ function EventHistory({userData, updateData}){
                 </div>
             }
             </div>
-            {concludedEventModal && <ConcludedEventModal selectedEvent={selectedEvent} />}
+            {concludedEventModal && <ConcludedEventModal selectedEvent={selectedEvent} setModal={setConcludedEventModal}/>}
         </div>
     )
 }
